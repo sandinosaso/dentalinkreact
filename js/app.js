@@ -25,12 +25,12 @@
 
 			// Fetch data
 
-			$.getJSON("/js/data.json",function(r){
-				console.log("Process me");
-				console.log(r);
-			}).error(function(err){
-				console.log(err);
-			})
+			// $.getJSON("/js/data.json",function(r){
+			// 	console.log("Process me");
+			// 	console.log(r);
+			// }).error(function(err){
+			// 	console.log(err);
+			// })
 		}
 	}
 

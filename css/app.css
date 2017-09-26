@@ -72,3 +72,13 @@ body {
 	vertical-align: middle;
 	padding-top:15px;
 }
+
+.day {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+} 
+
+.event {
+  color: red;
+} 

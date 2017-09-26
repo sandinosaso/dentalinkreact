@@ -1,34 +1,29 @@
-import React from 'react';
-import {render} from 'react-dom';
+import React, { Component } from 'react';
+import ReactDom from 'react-dom';
 
-class App extends React.Component {
+import Calendar from './components/calendar';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      events: []
+    };
+  }
+
+  componentDidMount() {
+    fetch('./js/data.json')
+      .then((res) => res.json())
+      .then((jsonResult) => {
+        this.setState({ events: jsonResult.data });
+      });
+  }
+
   render () {
-    return <div className="wrapper">
-    <div className="columns-container week-header">
-      <div className="column-day">Mon</div>
-      <div className="column-day">Tue</div>
-      <div className="column-day">Wed</div>
-      <div className="column-day">Thu</div>
-      <div className="column-day">Fri</div>
-      <div className="column-day">Sat</div>
-      <div className="column-day">Sun</div>
-    </div>
-    <div className="data">
-      <div className="columns-container schedule-container">
-        <div className="column-day"></div>
-        <div className="column-day"></div>
-        <div className="column-day"></div>
-        <div className="column-day"></div>
-        <div className="column-day"></div>
-        <div className="column-day"></div>
-        <div className="column-day"></div>
-      </div>
-      <div className="steps">
-        
-      </div>
-    </div>
-  </div>
+    return <Calendar events={this.state.events} />
   }
 }
 
-render(<App/>, document.getElementById('app'));
+
+ReactDom.render(<App/>, document.getElementById('app'));
