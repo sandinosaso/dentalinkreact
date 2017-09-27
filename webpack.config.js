@@ -18,7 +18,9 @@ var config = {
         loader : 'babel-loader'
       }
     ]
-  }
+  },
+  target: 'web',
+  devtool: 'source-map',
 };
 
 module.exports = config;

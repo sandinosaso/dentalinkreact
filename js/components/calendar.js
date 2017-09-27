@@ -1,31 +1,15 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import Day from './day';
+import { groupEventsByDay, getDayTimeSlots } from '../utils/calendar';
 
 class Calendar extends Component {
   render () {
     const { events } = this.props;
-    console.log('On Calendar component this.props.events', this.props);
-    const eventsByDay = {1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: []};
-    
-    events.map((event) => {
-      const startDate = moment(event.start_at);
-      const endDate = moment(event.due_at);
+    const eventsByDay = groupEventsByDay(events);
+    const slots = getDayTimeSlots();
 
-      const dow = startDate.day();
-
-      const duration = moment.duration(endDate.diff(startDate));
-      const hours = duration.asHours();
-
-      const height = hours * 100; // 1 hr equals to 100 px
-
-      console.log('Dia de la semana y duracion:', dow, hours);
-
-      let eventWithMoreInfo = Object.assign( { height } , event);
-      eventsByDay[dow].push(eventWithMoreInfo);
-    });
-
-    console.log('eventsByDay:', eventsByDay);
+    console.log('eventsByDay, slots:', eventsByDay, slots);
 
     
     return <div className="wrapper">
@@ -40,13 +24,13 @@ class Calendar extends Component {
       </div>
       <div className="data">
         <div className="columns-container schedule-container">
-          <div className="column-day">{<Day events={eventsByDay[1]} />}</div>
-          <div className="column-day">{<Day events={eventsByDay[2]} />}</div>
-          <div className="column-day">{<Day events={eventsByDay[3]} />}</div>
-          <div className="column-day">{<Day events={eventsByDay[4]} />}</div>
-          <div className="column-day">{<Day events={eventsByDay[5]} />}</div>
-          <div className="column-day">{<Day events={eventsByDay[6]} />}</div>
-          <div className="column-day">{<Day events={eventsByDay[7]} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[1]} slots={slots} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[2]} slots={slots} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[3]} slots={slots} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[4]} slots={slots} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[5]} slots={slots} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[6]} slots={slots} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[7]} slots={slots} />}</div>
         </div>
         <div className="steps">
           

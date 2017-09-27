@@ -3,11 +3,10 @@ import moment from 'moment';
 
 class Event extends Component {
   render () {
-    const date = moment(this.props.data.name.start_at);
-    const dow = date.day();
-
-    return <div className="event">
-      {this.props.data.name}
+    const { data, numberOfOverlaps } = this.props;
+    const startTime = moment(data.start_at).format('hh:mm');
+    const endTime = moment(data.due_at).format('hh:mm');
+    return <div className="event" style={{ flexGrow: numberOfOverlaps }}>{startTime}-{endTime}
     </div>
   }
 }

@@ -66,6 +66,7 @@ body {
 	font-weight: 300;
 	text-align: center;
 }
+
 .step {
 	border-bottom:1px solid #000;
 	box-sizing:border-box;
@@ -73,12 +74,17 @@ body {
 	padding-top:15px;
 }
 
-.day {
+.event {
+  flex: 1;
+  flex-direction: row;
+  min-width: 30px;
+  margin: 2px 5px 2px 5px;
+  background-color: blue;
+  color: white;
+}
+
+.slot {
   display: flex;
   flex: 1;
   flex-direction: row;
-} 
-
-.event {
-  color: red;
-} 
+}

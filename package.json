@@ -4,8 +4,9 @@
   "description": "This is a simple challenge where you can show all your skills. There are no rules, it's absolute open to however you want to solve it.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -d --watch",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "start": "node_modules/.bin/webpack-dev-server",
+    "dev": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "webpack": "^3.6.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.8.2"
   }
 }
