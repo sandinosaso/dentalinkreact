@@ -74,17 +74,23 @@ body {
 	padding-top:15px;
 }
 
-.event {
-  flex: 1;
-  flex-direction: row;
-  min-width: 30px;
-  margin: 2px 5px 2px 5px;
-  background-color: blue;
-  color: white;
+.day {
+  display: flex;
+  flex-direction: column;
 }
 
-.slot {
+.event-group {
+  width: 100%;
+  position: absolute;
+  max-width: inherit;
   display: flex;
-  flex: 1;
   flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.event {
+  position: relative;
+  margin: 1%;
+  background-color: blue;
+  color: white;
 }

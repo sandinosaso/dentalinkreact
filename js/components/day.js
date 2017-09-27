@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 import Event from './event.js';
+import EventGroup from './eventgroup.js';
 import Slot from './slot.js';
+import { getOverlapingEventsGroups } from '../utils/calendar';
 
 class Day extends Component {
   render () {
@@ -29,10 +31,12 @@ class Day extends Component {
         }
     });
 
+    const eventsGroups = getOverlapingEventsGroups(events);
+    
     return <div className="day">
-      {slotsWithEvents.map((slot) => (
-        <Slot data={slot} allEvents={events} /> 
-      ))}
+    {eventsGroups.map((events) => (
+      <EventGroup events={events} /> 
+    ))}
     </div>
   }
 }

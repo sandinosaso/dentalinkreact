@@ -30,7 +30,7 @@ class Calendar extends Component {
           <div className="column-day">{<Day events={eventsByDay[4]} slots={slots} />}</div>
           <div className="column-day">{<Day events={eventsByDay[5]} slots={slots} />}</div>
           <div className="column-day">{<Day events={eventsByDay[6]} slots={slots} />}</div>
-          <div className="column-day">{<Day events={eventsByDay[7]} slots={slots} />}</div>
+          <div className="column-day">{<Day events={eventsByDay[0]} slots={slots} />}</div>
         </div>
         <div className="steps">
           
