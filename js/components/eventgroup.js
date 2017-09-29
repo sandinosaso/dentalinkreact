@@ -1,20 +1,42 @@
-import React, { Component } from 'react';
-import moment from 'moment';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Event from './event';
-import { getEventsGroupTopValue } from '../utils/calendar';
+import { EventPropType } from '../lib/PropTypesValues';
+import { getEventsGroupTopValue, getEventsMatrixMaxColumns } from '../utils/calendar';
 
-class EventGroup extends Component {
-  render () {
-    const { events } = this.props;
-    const topValue = getEventsGroupTopValue(events);
-    const cantOfEvents = events.length;
+const EventGroup = (props) => {
+  const { events, eventGroupMatrix } = props;
+  // const topValue = getEventsGroupTopValue(events);
+  const cantOfEventsColumns = getEventsMatrixMaxColumns(eventGroupMatrix);
+  const width = cantOfEventsColumns === 1 ? 100 : (100 / cantOfEventsColumns) - 2;
 
-    return <div className="event-group" style={{ top: topValue }}>
-      {events.map((event) => (
-        <Event data={event} cantOfEvents={cantOfEvents} topValue={topValue} /> 
-      ))}
-    </div>
-  }
-}
+  const eventsWithPositions = [];
+
+  eventGroupMatrix.map((rowEvents) => {
+    return rowEvents.map((event, column) => {
+      const left = column * width;
+      const eventWithMoreInfo = Object.assign({ left, width }, event);
+      eventsWithPositions.push(eventWithMoreInfo);
+      return eventWithMoreInfo;
+    });
+  });
+
+  // return (<div className="event-group">
+  //   {events.map((event) => (
+  //     <Event data={event} cantOfEvents={cantOfEventsColumns} />
+  //   ))}
+  // </div>);
+
+  return (<div className="event-group">
+    {eventsWithPositions.map((event) => (
+      <Event data={event} />
+    ))}
+  </div>);
+};
+
+EventGroup.propTypes = {
+  events: PropTypes.array.isRequired,
+  eventGroupMatrix: PropTypes.array.isRequired,
+};
 
 export default EventGroup;

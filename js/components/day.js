@@ -1,44 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import EventGroup from './eventgroup';
+import { EventPropType } from '../lib/PropTypesValues';
+import { getOverlapingEventsGroups, getOverlapingGroupPositionMatrix } from '../utils/calendar';
 
-import Event from './event.js';
-import EventGroup from './eventgroup.js';
-import Slot from './slot.js';
-import { getOverlapingEventsGroups } from '../utils/calendar';
+const Day = (props) => {
+  const { events } = props;
+  const eventsGroups = getOverlapingEventsGroups(events);
 
-class Day extends Component {
-  render () {
-    const { events, slots } = this.props;
+  return (<div className="day">
+    {eventsGroups.map((group) => {
+      const eventGroupMatrix = getOverlapingGroupPositionMatrix(group);
+      return <EventGroup events={group} eventGroupMatrix={eventGroupMatrix} />;
+    })}
+  </div>);
+};
 
-    const slotsWithEvents = slots.map((slot) => {
-        const eventsAtSlot = events.filter((event) => {
-          const startDate = moment(event.start_at).format('YYYY-MM-DD');
-          const startHour = moment(event.start_at).format('hh:mm');
-          const endHour = moment(event.due_at).format('hh:mm');
-          const isBetween = moment(`${startDate} ${slot.id}`).add(1, 'seconds').isBetween(`${startDate} ${startHour}`, `${startDate} ${endHour}`, null, '[]');
-          
-          if (isBetween) {
-            console.log('isBetween:', isBetween, event, slot.id, event.start_at, event.due_at);
-          }
-          return isBetween;
-        });
-
-        if (eventsAtSlot.length > 0) {
-          console.log('Slot with events slot.id', slot.id, eventsAtSlot);
-        }
-        return {
-          time: slot.id,
-          events: eventsAtSlot
-        }
-    });
-
-    const eventsGroups = getOverlapingEventsGroups(events);
-    
-    return <div className="day">
-    {eventsGroups.map((events) => (
-      <EventGroup events={events} /> 
-    ))}
-    </div>
-  }
-}
+Day.propTypes = {
+  events: PropTypes.arrayOf(EventPropType).isRequired,
+};
 
 export default Day;
