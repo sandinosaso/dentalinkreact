@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      events: []
+      events: [],
     };
   }
 
@@ -20,10 +20,10 @@ class App extends Component {
       });
   }
 
-  render () {
-    return <Calendar events={this.state.events} />
+  render() {
+    return <Calendar events={this.state.events} />;
   }
 }
 
 
-ReactDom.render(<App/>, document.getElementById('app'));
+ReactDom.render(<App />, document.getElementById('app'));

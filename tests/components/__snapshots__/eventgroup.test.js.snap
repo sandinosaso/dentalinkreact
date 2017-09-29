@@ -1,0 +1,375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EventGroup /> renders an EventGroup component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EventGroup
+    eventGroupMatrix={
+      Array [
+        Array [
+          Object {
+            "due_at": "2016-05-16 10:00:00",
+            "name": "Event 1",
+            "start_at": "2016-05-16 08:00:00",
+          },
+          Object {
+            "due_at": "2016-05-16 09:00:00",
+            "name": "Event 2",
+            "start_at": "2016-05-16 08:00:00",
+          },
+          Object {
+            "due_at": "2016-05-16 09:30:00",
+            "name": "Event 3",
+            "start_at": "2016-05-16 08:30:00",
+          },
+        ],
+        Array [
+          undefined,
+          Object {
+            "due_at": "2016-05-16 09:30:00",
+            "name": "Event 4",
+            "start_at": "2016-05-16 09:00:00",
+          },
+        ],
+      ]
+    }
+    events={
+      Array [
+        Object {
+          "due_at": "2016-05-16 10:00:00",
+          "name": "Event 1",
+          "start_at": "2016-05-16 08:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:00:00",
+          "name": "Event 2",
+          "start_at": "2016-05-16 08:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:30:00",
+          "name": "Event 3",
+          "start_at": "2016-05-16 08:30:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:30:00",
+          "name": "Event 4",
+          "start_at": "2016-05-16 09:00:00",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Event
+          data={
+            Object {
+              "due_at": "2016-05-16 10:00:00",
+              "left": 0,
+              "name": "Event 1",
+              "start_at": "2016-05-16 08:00:00",
+              "width": 33.333333333333336,
+            }
+          }
+        />,
+        <Event
+          data={
+            Object {
+              "due_at": "2016-05-16 09:00:00",
+              "left": 33.333333333333336,
+              "name": "Event 2",
+              "start_at": "2016-05-16 08:00:00",
+              "width": 33.333333333333336,
+            }
+          }
+        />,
+        <Event
+          data={
+            Object {
+              "due_at": "2016-05-16 09:30:00",
+              "left": 66.66666666666667,
+              "name": "Event 3",
+              "start_at": "2016-05-16 08:30:00",
+              "width": 33.333333333333336,
+            }
+          }
+        />,
+        <Event
+          data={
+            Object {
+              "left": 0,
+              "width": 33.333333333333336,
+            }
+          }
+        />,
+        <Event
+          data={
+            Object {
+              "due_at": "2016-05-16 09:30:00",
+              "left": 33.333333333333336,
+              "name": "Event 4",
+              "start_at": "2016-05-16 09:00:00",
+              "width": 33.333333333333336,
+            }
+          }
+        />,
+      ],
+      "className": "event-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "Event 1",
+        "nodeType": "function",
+        "props": Object {
+          "data": Object {
+            "due_at": "2016-05-16 10:00:00",
+            "left": 0,
+            "name": "Event 1",
+            "start_at": "2016-05-16 08:00:00",
+            "width": 33.333333333333336,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Event 2",
+        "nodeType": "function",
+        "props": Object {
+          "data": Object {
+            "due_at": "2016-05-16 09:00:00",
+            "left": 33.333333333333336,
+            "name": "Event 2",
+            "start_at": "2016-05-16 08:00:00",
+            "width": 33.333333333333336,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Event 3",
+        "nodeType": "function",
+        "props": Object {
+          "data": Object {
+            "due_at": "2016-05-16 09:30:00",
+            "left": 66.66666666666667,
+            "name": "Event 3",
+            "start_at": "2016-05-16 08:30:00",
+            "width": 33.333333333333336,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "function",
+        "props": Object {
+          "data": Object {
+            "left": 0,
+            "width": 33.333333333333336,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "Event 4",
+        "nodeType": "function",
+        "props": Object {
+          "data": Object {
+            "due_at": "2016-05-16 09:30:00",
+            "left": 33.333333333333336,
+            "name": "Event 4",
+            "start_at": "2016-05-16 09:00:00",
+            "width": 33.333333333333336,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Event
+            data={
+              Object {
+                "due_at": "2016-05-16 10:00:00",
+                "left": 0,
+                "name": "Event 1",
+                "start_at": "2016-05-16 08:00:00",
+                "width": 33.333333333333336,
+              }
+            }
+          />,
+          <Event
+            data={
+              Object {
+                "due_at": "2016-05-16 09:00:00",
+                "left": 33.333333333333336,
+                "name": "Event 2",
+                "start_at": "2016-05-16 08:00:00",
+                "width": 33.333333333333336,
+              }
+            }
+          />,
+          <Event
+            data={
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "left": 66.66666666666667,
+                "name": "Event 3",
+                "start_at": "2016-05-16 08:30:00",
+                "width": 33.333333333333336,
+              }
+            }
+          />,
+          <Event
+            data={
+              Object {
+                "left": 0,
+                "width": 33.333333333333336,
+              }
+            }
+          />,
+          <Event
+            data={
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "left": 33.333333333333336,
+                "name": "Event 4",
+                "start_at": "2016-05-16 09:00:00",
+                "width": 33.333333333333336,
+              }
+            }
+          />,
+        ],
+        "className": "event-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Event 1",
+          "nodeType": "function",
+          "props": Object {
+            "data": Object {
+              "due_at": "2016-05-16 10:00:00",
+              "left": 0,
+              "name": "Event 1",
+              "start_at": "2016-05-16 08:00:00",
+              "width": 33.333333333333336,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Event 2",
+          "nodeType": "function",
+          "props": Object {
+            "data": Object {
+              "due_at": "2016-05-16 09:00:00",
+              "left": 33.333333333333336,
+              "name": "Event 2",
+              "start_at": "2016-05-16 08:00:00",
+              "width": 33.333333333333336,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Event 3",
+          "nodeType": "function",
+          "props": Object {
+            "data": Object {
+              "due_at": "2016-05-16 09:30:00",
+              "left": 66.66666666666667,
+              "name": "Event 3",
+              "start_at": "2016-05-16 08:30:00",
+              "width": 33.333333333333336,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "function",
+          "props": Object {
+            "data": Object {
+              "left": 0,
+              "width": 33.333333333333336,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "Event 4",
+          "nodeType": "function",
+          "props": Object {
+            "data": Object {
+              "due_at": "2016-05-16 09:30:00",
+              "left": 33.333333333333336,
+              "name": "Event 4",
+              "start_at": "2016-05-16 09:00:00",
+              "width": 33.333333333333336,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

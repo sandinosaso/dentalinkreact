@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Day from './day';
-import { groupEventsByDay, getDayTimeSlots } from '../utils/calendar';
+import { EventPropType } from '../lib/PropTypesValues';
+import { groupEventsByDay } from '../utils/calendar';
 
 const Calendar = (props) => {
   const { events } = props;
   const eventsByDay = groupEventsByDay(events);
-  const slots = getDayTimeSlots();
-
-  console.log('eventsByDay, slots:', eventsByDay, slots);
 
   return (<div className="wrapper">
     <div className="columns-container week-header">
@@ -22,13 +20,13 @@ const Calendar = (props) => {
     </div>
     <div className="data">
       <div className="columns-container schedule-container">
-        <div className="column-day">{<Day events={eventsByDay[1]} slots={slots} />}</div>
-        <div className="column-day">{<Day events={eventsByDay[2]} slots={slots} />}</div>
-        <div className="column-day">{<Day events={eventsByDay[3]} slots={slots} />}</div>
-        <div className="column-day">{<Day events={eventsByDay[4]} slots={slots} />}</div>
-        <div className="column-day">{<Day events={eventsByDay[5]} slots={slots} />}</div>
-        <div className="column-day">{<Day events={eventsByDay[6]} slots={slots} />}</div>
-        <div className="column-day">{<Day events={eventsByDay[0]} slots={slots} />}</div>
+        <div className="column-day">{<Day events={eventsByDay[1]} />}</div>
+        <div className="column-day">{<Day events={eventsByDay[2]} />}</div>
+        <div className="column-day">{<Day events={eventsByDay[3]} />}</div>
+        <div className="column-day">{<Day events={eventsByDay[4]} />}</div>
+        <div className="column-day">{<Day events={eventsByDay[5]} />}</div>
+        <div className="column-day">{<Day events={eventsByDay[6]} />}</div>
+        <div className="column-day">{<Day events={eventsByDay[0]} />}</div>
       </div>
       <div className="steps">
 
@@ -39,13 +37,7 @@ const Calendar = (props) => {
 
 Calendar.propTypes = {
   events: PropTypes.arrayOf(
-    PropTypes.shape({
-      height: PropTypes.number,
-      top: PropTypes.number,
-      start_at: PropTypes.string,
-      due_at: PropTypes.string,
-      name: PropTypes.string,
-    })
+    EventPropType
   ).isRequired,
 };
 

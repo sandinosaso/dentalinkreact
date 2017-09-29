@@ -2,9 +2,9 @@ import {
   groupEventsByDay,
   getOverlapingEventsGroups,
   getOverlapingGroupPositionMatrix,
-  getEventsGroupTopValue,
   getEventsMatrixMaxColumns,
-} from './calendar';
+  calculateEventsPositionsInGroup,
+} from '../../js/utils/calendar';
 
 describe('utils/calendar', () => {
   it('groupEventsByDay: should group events by day (all events same day', () => {
@@ -137,7 +137,7 @@ describe('utils/calendar', () => {
         { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 11:30:00', name: 'Event 7' },
       ],
     ];
-
+    getOverlapingEventsGroups(events);
     const sortMultidimensional = (group) => group.sort((a, b) => a.name > b.name);
     const OverlapGroupsResultSorted = getOverlapingEventsGroups(events).map(sortMultidimensional);
     const expectedResultSorted = expectedResult.map(sortMultidimensional);
@@ -178,29 +178,45 @@ describe('utils/calendar', () => {
     expect(OverlapGroupsResultSorted).toEqual(expectedResultSorted);
   });
 
-  it('Testing getEventsGroupTopValue: should return correct topValue for each group', () => {
-    const groups = [
+  it('Testing getOverlapingEventsGroups: should return correct groups of overlaps (all events differents days)', () => {
+    const events = [
+      { start_at: '2016-05-16 10:00:00', due_at: '2016-05-16 11:00:00', name: 'Event 5' },
+      { start_at: '2016-05-17 08:30:00', due_at: '2016-05-17 09:30:00', name: 'Event 3' },
+      { start_at: '2016-05-18 08:00:00', due_at: '2016-05-18 10:00:00', name: 'Event 1' },
+      { start_at: '2016-05-19 08:00:00', due_at: '2016-05-19 09:00:00', name: 'Event 2' },
+      { start_at: '2016-05-20 11:00:00', due_at: '2016-05-20 12:00:00', name: 'Event 6' },
+      { start_at: '2016-05-21 09:00:00', due_at: '2016-05-21 09:30:00', name: 'Event 4' },
+      { start_at: '2016-05-22 11:00:00', due_at: '2016-05-22 11:30:00', name: 'Event 7' }];
+
+    const expectedResult = [
       [
-        { start_at: '2016-05-16 10:00:00', due_at: '2016-05-16 11:00:00', name: 'Event 5', top: 1000 },
+        { start_at: '2016-05-16 10:00:00', due_at: '2016-05-16 11:00:00', name: 'Event 5' },
       ],
       [
-        { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 10:00:00', name: 'Event 1', top: 800 },
-        { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 09:00:00', name: 'Event 2', top: 800 },
-        { start_at: '2016-05-16 08:30:00', due_at: '2016-05-16 09:30:00', name: 'Event 3', top: 850 },
-        { start_at: '2016-05-16 09:00:00', due_at: '2016-05-16 09:30:00', name: 'Event 4', top: 900 },
+        { start_at: '2016-05-17 08:30:00', due_at: '2016-05-17 09:30:00', name: 'Event 3' },
       ],
       [
-        { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 12:00:00', name: 'Event 6', top: 1100 },
-        { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 11:30:00', name: 'Event 7', top: 1100 },
+        { start_at: '2016-05-18 08:00:00', due_at: '2016-05-18 10:00:00', name: 'Event 1' },
+      ],
+      [
+        { start_at: '2016-05-19 08:00:00', due_at: '2016-05-19 09:00:00', name: 'Event 2' },
+      ],
+      [
+        { start_at: '2016-05-20 11:00:00', due_at: '2016-05-20 12:00:00', name: 'Event 6' },
+      ],
+      [
+        { start_at: '2016-05-21 09:00:00', due_at: '2016-05-21 09:30:00', name: 'Event 4' },
+      ],
+      [
+        { start_at: '2016-05-22 11:00:00', due_at: '2016-05-22 11:30:00', name: 'Event 7' },
       ],
     ];
 
+    const sortMultidimensional = (group) => group.sort((a, b) => a.name > b.name);
+    const OverlapGroupsResultSorted = getOverlapingEventsGroups(events).map(sortMultidimensional);
+    const expectedResultSorted = expectedResult.map(sortMultidimensional);
 
-    const expectedResult = [1000, 800, 1100];
-
-    const topValues = groups.map((group) => getEventsGroupTopValue(group));
-
-    expect(topValues).toEqual(expectedResult);
+    expect(OverlapGroupsResultSorted).toEqual(expectedResultSorted);
   });
 
   it('Testing getEventsMatrixMaxColumns: should return correct max number of columns of all rows for each group', () => {
@@ -226,6 +242,96 @@ describe('utils/calendar', () => {
     const numberOfColumns = positionsMatrix.map((matrix) => getEventsMatrixMaxColumns(matrix));
 
     expect(numberOfColumns).toEqual(expectedResult);
+  });
+
+  it('Testing getOverlapingGroupPositionMatrix: should return correct rows and columns for each group', () => {
+    const groups = [
+      [
+        { start_at: '2016-05-16 10:00:00', due_at: '2016-05-16 11:00:00', name: 'Event 5' },
+      ],
+      [
+        { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 10:00:00', name: 'Event 1' },
+        { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 09:00:00', name: 'Event 2' },
+        { start_at: '2016-05-16 08:30:00', due_at: '2016-05-16 09:30:00', name: 'Event 3' },
+        { start_at: '2016-05-16 09:00:00', due_at: '2016-05-16 09:30:00', name: 'Event 4' },
+      ],
+      [
+        { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 12:00:00', name: 'Event 6' },
+        { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 11:30:00', name: 'Event 7' },
+      ],
+    ];
+
+    const expectedResult = [
+      [
+        [
+          { start_at: '2016-05-16 10:00:00', due_at: '2016-05-16 11:00:00', name: 'Event 5' },
+        ],
+      ],
+      [
+        [
+          { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 10:00:00', name: 'Event 1' },
+          { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 09:00:00', name: 'Event 2' },
+          { start_at: '2016-05-16 08:30:00', due_at: '2016-05-16 09:30:00', name: 'Event 3' },
+        ],
+        [
+          undefined,
+          { start_at: '2016-05-16 09:00:00', due_at: '2016-05-16 09:30:00', name: 'Event 4' },
+        ],
+      ],
+      [
+        [
+          { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 12:00:00', name: 'Event 6' },
+          { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 11:30:00', name: 'Event 7' },
+        ],
+      ],
+    ];
+
+    const positionsMatrix = groups.map((group) => getOverlapingGroupPositionMatrix(group));
+    expect(positionsMatrix).toEqual(expectedResult);
+  });
+
+  it('Testing calculateEventsPositionsInGroup: should return correct width and left for each event on each group', () => {
+    const matrix = [
+      [
+        [
+          { start_at: '2016-05-16 10:00:00', due_at: '2016-05-16 11:00:00', name: 'Event 5' },
+        ],
+      ],
+      [
+        [
+          { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 10:00:00', name: 'Event 1' },
+          { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 09:00:00', name: 'Event 2' },
+          { start_at: '2016-05-16 08:30:00', due_at: '2016-05-16 09:30:00', name: 'Event 3' },
+        ],
+        [
+          { start_at: '2016-05-16 09:00:00', due_at: '2016-05-16 09:30:00', name: 'Event 4' },
+        ],
+      ],
+      [
+        [
+          { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 12:00:00', name: 'Event 6' },
+          { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 11:30:00', name: 'Event 7' },
+        ],
+      ],
+    ];
+
+    const expectedResult = [
+      [
+        { start_at: '2016-05-16 10:00:00', due_at: '2016-05-16 11:00:00', name: 'Event 5', width: 100, left: 0 },
+      ],
+      [
+        { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 10:00:00', name: 'Event 1', width: 100 / 3, left: (100 / 3) * 0 },
+        { start_at: '2016-05-16 08:00:00', due_at: '2016-05-16 09:00:00', name: 'Event 2', width: 100 / 3, left: (100 / 3) * 1 },
+        { start_at: '2016-05-16 08:30:00', due_at: '2016-05-16 09:30:00', name: 'Event 3', width: 100 / 3, left: (100 / 3) * 2 },
+        { start_at: '2016-05-16 09:00:00', due_at: '2016-05-16 09:30:00', name: 'Event 4', width: 100 / 3, left: 0 },
+      ],
+      [
+        { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 12:00:00', name: 'Event 6', width: 50, left: 0 },
+        { start_at: '2016-05-16 11:00:00', due_at: '2016-05-16 11:30:00', name: 'Event 7', width: 50, left: 50 },
+      ],
+    ];
+    const groupsPostion = matrix.map((group) => calculateEventsPositionsInGroup(group));
+    expect(groupsPostion).toEqual(expectedResult);
   });
 });
 

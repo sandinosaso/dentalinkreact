@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for calendar.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> calendar.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.9% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>67/78</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>21/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">82.35% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>14/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>64/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">98x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">84x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import moment from 'moment';
+&nbsp;
+const variables = {
+  step: 30, // minutes
+  step_height: 50, // Px
+  start: '2016-05-16 00:00:00',
+};
+&nbsp;
+const groupEventsByDay = (events) =&gt; {
+  const eventsByDay = { 0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [] };
+&nbsp;
+  events.forEach((event) =&gt; {
+    const startDate = moment(event.start_at);
+    const endDate = moment(event.due_at);
+&nbsp;
+    const dow = startDate.day();
+    const duration = moment.duration(endDate.diff(startDate));
+    const hours = duration.asHours();
+&nbsp;
+    const height = hours * variables.step_height * 2; // 30 minutes equals to 0.5 hours
+    // Convert start date to minutes, multiply for the step and divide by step height
+    const top = (((startDate.hour() * 60) + startDate.minutes()) / variables.step) * variables.step_height;
+&nbsp;
+    const eventWithMoreInfo = Object.assign({ height, top }, event);
+    eventsByDay[dow].push(eventWithMoreInfo);
+  });
+&nbsp;
+  return eventsByDay;
+};
+&nbsp;
+const calculateEventsPositionsInGroup = <span class="fstat-no" title="function not covered" >(e</span>ventGroupMatrix) =&gt; {
+  const cantOfEventsColumns = <span class="cstat-no" title="statement not covered" >getEventsMatrixMaxColumns(eventGroupMatrix);</span>
+  const width = <span class="cstat-no" title="statement not covered" >cantOfEventsColumns === 1 ? 100 : (100 / cantOfEventsColumns);</span>
+&nbsp;
+  const eventsWithPositions = <span class="cstat-no" title="statement not covered" >[];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  eventGroupMatrix.map(<span class="fstat-no" title="function not covered" >(r</span>owEvents) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return rowEvents.map(<span class="fstat-no" title="function not covered" >(e</span>vent, column) =&gt; {</span>
+      const left = <span class="cstat-no" title="statement not covered" >column * width;</span>
+      const eventWithMoreInfo = <span class="cstat-no" title="statement not covered" >Object.assign({ left, width }, event);</span>
+<span class="cstat-no" title="statement not covered" >      eventsWithPositions.push(eventWithMoreInfo);</span>
+<span class="cstat-no" title="statement not covered" >      return eventWithMoreInfo;</span>
+    });
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return eventsWithPositions;</span>
+};
+&nbsp;
+const getOverlapingEvents = (event, events) =&gt; {
+  const overlapingEvents = events.filter((currentEvent) =&gt; currentEvent.name !== event.name).filter((currentEvent) =&gt; {
+    // (StartA &lt;= EndB) and (EndA &gt;= StartB)
+    if (moment(currentEvent.due_at).isAfter(event.start_at) &amp;&amp;
+        moment(event.due_at).isAfter(currentEvent.start_at)) {
+      return true;
+    }
+    return false;
+  });
+&nbsp;
+  return overlapingEvents;
+};
+&nbsp;
+const getOverlapingEventsGroups = (events) =&gt; {
+  const overlapingEventsGroups = events.reduce((prevValue, currentEvent, index) =&gt; {
+    const overlapingEvents = getOverlapingEvents(currentEvent, events);
+    overlapingEvents.push(currentEvent);
+&nbsp;
+    const alredyIncludedEvent = prevValue.filter((group) =&gt;
+      // console.log('GROUUUUUUUUUUU', group);
+      group.includes(currentEvent)
+    );
+&nbsp;
+    if (alredyIncludedEvent.length === 0) {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (overlapingEvents.length &gt; 0) {
+        prevValue.push(overlapingEvents);
+      } else {
+<span class="cstat-no" title="statement not covered" >        prevValue.push([currentEvent]);</span>
+      }
+    }
+    return prevValue;
+  }, []);
+&nbsp;
+  return overlapingEventsGroups;
+};
+&nbsp;
+const getEventsMatrixMaxColumns = (matrix) =&gt; {
+  const maxNumberColumns = Math.max(...matrix.map((events) =&gt; events.length));
+  return maxNumberColumns;
+};
+&nbsp;
+const eventsOverlaps = (event1, event2) =&gt; {
+  if (moment(event1.due_at).isAfter(event2.start_at) &amp;&amp;
+    moment(event2.due_at).isAfter(event1.start_at)) {
+    return true;
+  }
+  return false;
+};
+&nbsp;
+&nbsp;
+const getMatrixLastRowForColumn = (matrix, col) =&gt; {
+  let row = matrix.length;
+  while (row) {
+    row -= 1;
+    if (matrix[row][col] !== undefined) return row;
+  }
+  // No more rows
+  return false;
+};
+&nbsp;
+const getOverlapingGroupPositionMatrix = (events) =&gt; {
+  const groupPositionMatrix = [];
+&nbsp;
+  events.map((event) =&gt; {
+    let col = 0;
+    let found = false;
+&nbsp;
+    while (!found) {
+      const row = getMatrixLastRowForColumn(groupPositionMatrix, col);
+&nbsp;
+      if (row === false) {
+        // No last event in row and no index so create index and place here
+        groupPositionMatrix[0] = groupPositionMatrix[0] || [];
+        groupPositionMatrix[0].push(event);
+        found = true;
+      } else {
+        const foundEvent = groupPositionMatrix[row][col];
+        if (!eventsOverlaps(event, foundEvent)) {
+          // Place the current event in the next row of the current column
+          groupPositionMatrix[row + 1] = groupPositionMatrix[row + 1] || [];
+          groupPositionMatrix[row + 1][col] = event;
+          found = true;
+        }
+      }
+&nbsp;
+      col += 1;
+    }
+    return event;
+  });
+&nbsp;
+  return groupPositionMatrix;
+};
+&nbsp;
+export {
+  groupEventsByDay,
+  getOverlapingEventsGroups,
+  getOverlapingGroupPositionMatrix,
+  getEventsMatrixMaxColumns,
+  calculateEventsPositionsInGroup,
+};
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 29 2017 16:37:10 GMT-0300 (UYT)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

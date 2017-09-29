@@ -1,0 +1,1974 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Calendar /> renders an Calendar component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Calendar
+    events={
+      Array [
+        Object {
+          "due_at": "2016-05-16 11:00:00",
+          "name": "Event 5",
+          "start_at": "2016-05-16 10:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:30:00",
+          "name": "Event 3",
+          "start_at": "2016-05-16 08:30:00",
+        },
+        Object {
+          "due_at": "2016-05-16 10:00:00",
+          "name": "Event 1",
+          "start_at": "2016-05-16 08:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:00:00",
+          "name": "Event 2",
+          "start_at": "2016-05-16 08:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 12:00:00",
+          "name": "Event 6",
+          "start_at": "2016-05-16 11:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:30:00",
+          "name": "Event 4",
+          "start_at": "2016-05-16 09:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 11:30:00",
+          "name": "Event 7",
+          "start_at": "2016-05-16 11:00:00",
+        },
+        Object {
+          "due_at": "2016-05-17 11:00:00",
+          "name": "Event 8",
+          "start_at": "2016-05-17 10:00:00",
+        },
+        Object {
+          "due_at": "2016-05-17 09:30:00",
+          "name": "Event 9",
+          "start_at": "2016-05-17 08:30:00",
+        },
+        Object {
+          "due_at": "2016-05-18 11:30:00",
+          "name": "Event 10",
+          "start_at": "2016-05-18 11:00:00",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="columns-container week-header"
+        >
+          <div
+            className="column-day"
+          >
+            Mon
+          </div>
+          <div
+            className="column-day"
+          >
+            Tue
+          </div>
+          <div
+            className="column-day"
+          >
+            Wed
+          </div>
+          <div
+            className="column-day"
+          >
+            Thu
+          </div>
+          <div
+            className="column-day"
+          >
+            Fri
+          </div>
+          <div
+            className="column-day"
+          >
+            Sat
+          </div>
+          <div
+            className="column-day"
+          >
+            Sun
+          </div>
+        </div>,
+        <div
+          className="data"
+        >
+          <div
+            className="columns-container schedule-container"
+          >
+            <div
+              className="column-day"
+            >
+              <Day
+                events={
+                  Array [
+                    Object {
+                      "due_at": "2016-05-16 11:00:00",
+                      "height": 100,
+                      "name": "Event 5",
+                      "start_at": "2016-05-16 10:00:00",
+                      "top": 1000,
+                    },
+                    Object {
+                      "due_at": "2016-05-16 09:30:00",
+                      "height": 100,
+                      "name": "Event 3",
+                      "start_at": "2016-05-16 08:30:00",
+                      "top": 850,
+                    },
+                    Object {
+                      "due_at": "2016-05-16 10:00:00",
+                      "height": 200,
+                      "name": "Event 1",
+                      "start_at": "2016-05-16 08:00:00",
+                      "top": 800,
+                    },
+                    Object {
+                      "due_at": "2016-05-16 09:00:00",
+                      "height": 100,
+                      "name": "Event 2",
+                      "start_at": "2016-05-16 08:00:00",
+                      "top": 800,
+                    },
+                    Object {
+                      "due_at": "2016-05-16 12:00:00",
+                      "height": 100,
+                      "name": "Event 6",
+                      "start_at": "2016-05-16 11:00:00",
+                      "top": 1100,
+                    },
+                    Object {
+                      "due_at": "2016-05-16 09:30:00",
+                      "height": 50,
+                      "name": "Event 4",
+                      "start_at": "2016-05-16 09:00:00",
+                      "top": 900,
+                    },
+                    Object {
+                      "due_at": "2016-05-16 11:30:00",
+                      "height": 50,
+                      "name": "Event 7",
+                      "start_at": "2016-05-16 11:00:00",
+                      "top": 1100,
+                    },
+                  ]
+                }
+              />
+            </div>
+            <div
+              className="column-day"
+            >
+              <Day
+                events={
+                  Array [
+                    Object {
+                      "due_at": "2016-05-17 11:00:00",
+                      "height": 100,
+                      "name": "Event 8",
+                      "start_at": "2016-05-17 10:00:00",
+                      "top": 1000,
+                    },
+                    Object {
+                      "due_at": "2016-05-17 09:30:00",
+                      "height": 100,
+                      "name": "Event 9",
+                      "start_at": "2016-05-17 08:30:00",
+                      "top": 850,
+                    },
+                  ]
+                }
+              />
+            </div>
+            <div
+              className="column-day"
+            >
+              <Day
+                events={
+                  Array [
+                    Object {
+                      "due_at": "2016-05-18 11:30:00",
+                      "height": 50,
+                      "name": "Event 10",
+                      "start_at": "2016-05-18 11:00:00",
+                      "top": 1100,
+                    },
+                  ]
+                }
+              />
+            </div>
+            <div
+              className="column-day"
+            >
+              <Day
+                events={Array []}
+              />
+            </div>
+            <div
+              className="column-day"
+            >
+              <Day
+                events={Array []}
+              />
+            </div>
+            <div
+              className="column-day"
+            >
+              <Day
+                events={Array []}
+              />
+            </div>
+            <div
+              className="column-day"
+            >
+              <Day
+                events={Array []}
+              />
+            </div>
+          </div>
+          <div
+            className="steps"
+          />
+        </div>,
+      ],
+      "className": "wrapper",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="column-day"
+            >
+              Mon
+            </div>,
+            <div
+              className="column-day"
+            >
+              Tue
+            </div>,
+            <div
+              className="column-day"
+            >
+              Wed
+            </div>,
+            <div
+              className="column-day"
+            >
+              Thu
+            </div>,
+            <div
+              className="column-day"
+            >
+              Fri
+            </div>,
+            <div
+              className="column-day"
+            >
+              Sat
+            </div>,
+            <div
+              className="column-day"
+            >
+              Sun
+            </div>,
+          ],
+          "className": "columns-container week-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Mon",
+              "className": "column-day",
+            },
+            "ref": null,
+            "rendered": "Mon",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Tue",
+              "className": "column-day",
+            },
+            "ref": null,
+            "rendered": "Tue",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Wed",
+              "className": "column-day",
+            },
+            "ref": null,
+            "rendered": "Wed",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Thu",
+              "className": "column-day",
+            },
+            "ref": null,
+            "rendered": "Thu",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Fri",
+              "className": "column-day",
+            },
+            "ref": null,
+            "rendered": "Fri",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sat",
+              "className": "column-day",
+            },
+            "ref": null,
+            "rendered": "Sat",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sun",
+              "className": "column-day",
+            },
+            "ref": null,
+            "rendered": "Sun",
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="columns-container schedule-container"
+            >
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={
+                    Array [
+                      Object {
+                        "due_at": "2016-05-16 11:00:00",
+                        "height": 100,
+                        "name": "Event 5",
+                        "start_at": "2016-05-16 10:00:00",
+                        "top": 1000,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:30:00",
+                        "height": 100,
+                        "name": "Event 3",
+                        "start_at": "2016-05-16 08:30:00",
+                        "top": 850,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 10:00:00",
+                        "height": 200,
+                        "name": "Event 1",
+                        "start_at": "2016-05-16 08:00:00",
+                        "top": 800,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:00:00",
+                        "height": 100,
+                        "name": "Event 2",
+                        "start_at": "2016-05-16 08:00:00",
+                        "top": 800,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 12:00:00",
+                        "height": 100,
+                        "name": "Event 6",
+                        "start_at": "2016-05-16 11:00:00",
+                        "top": 1100,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:30:00",
+                        "height": 50,
+                        "name": "Event 4",
+                        "start_at": "2016-05-16 09:00:00",
+                        "top": 900,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 11:30:00",
+                        "height": 50,
+                        "name": "Event 7",
+                        "start_at": "2016-05-16 11:00:00",
+                        "top": 1100,
+                      },
+                    ]
+                  }
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={
+                    Array [
+                      Object {
+                        "due_at": "2016-05-17 11:00:00",
+                        "height": 100,
+                        "name": "Event 8",
+                        "start_at": "2016-05-17 10:00:00",
+                        "top": 1000,
+                      },
+                      Object {
+                        "due_at": "2016-05-17 09:30:00",
+                        "height": 100,
+                        "name": "Event 9",
+                        "start_at": "2016-05-17 08:30:00",
+                        "top": 850,
+                      },
+                    ]
+                  }
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={
+                    Array [
+                      Object {
+                        "due_at": "2016-05-18 11:30:00",
+                        "height": 50,
+                        "name": "Event 10",
+                        "start_at": "2016-05-18 11:00:00",
+                        "top": 1100,
+                      },
+                    ]
+                  }
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+            </div>,
+            <div
+              className="steps"
+            />,
+          ],
+          "className": "data",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-16 11:00:00",
+                          "height": 100,
+                          "name": "Event 5",
+                          "start_at": "2016-05-16 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 100,
+                          "name": "Event 3",
+                          "start_at": "2016-05-16 08:30:00",
+                          "top": 850,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 10:00:00",
+                          "height": 200,
+                          "name": "Event 1",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:00:00",
+                          "height": 100,
+                          "name": "Event 2",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 12:00:00",
+                          "height": 100,
+                          "name": "Event 6",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 50,
+                          "name": "Event 4",
+                          "start_at": "2016-05-16 09:00:00",
+                          "top": 900,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 11:30:00",
+                          "height": 50,
+                          "name": "Event 7",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                      ]
+                    }
+                  />
+                </div>,
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-17 11:00:00",
+                          "height": 100,
+                          "name": "Event 8",
+                          "start_at": "2016-05-17 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-17 09:30:00",
+                          "height": 100,
+                          "name": "Event 9",
+                          "start_at": "2016-05-17 08:30:00",
+                          "top": 850,
+                        },
+                      ]
+                    }
+                  />
+                </div>,
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-18 11:30:00",
+                          "height": 50,
+                          "name": "Event 10",
+                          "start_at": "2016-05-18 11:00:00",
+                          "top": 1100,
+                        },
+                      ]
+                    }
+                  />
+                </div>,
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>,
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>,
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>,
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>,
+              ],
+              "className": "columns-container schedule-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-16 11:00:00",
+                          "height": 100,
+                          "name": "Event 5",
+                          "start_at": "2016-05-16 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 100,
+                          "name": "Event 3",
+                          "start_at": "2016-05-16 08:30:00",
+                          "top": 850,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 10:00:00",
+                          "height": 200,
+                          "name": "Event 1",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:00:00",
+                          "height": 100,
+                          "name": "Event 2",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 12:00:00",
+                          "height": 100,
+                          "name": "Event 6",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 50,
+                          "name": "Event 4",
+                          "start_at": "2016-05-16 09:00:00",
+                          "top": 900,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 11:30:00",
+                          "height": 50,
+                          "name": "Event 7",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                      ]
+                    }
+                  />,
+                  "className": "column-day",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "function",
+                  "props": Object {
+                    "events": Array [
+                      Object {
+                        "due_at": "2016-05-16 11:00:00",
+                        "height": 100,
+                        "name": "Event 5",
+                        "start_at": "2016-05-16 10:00:00",
+                        "top": 1000,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:30:00",
+                        "height": 100,
+                        "name": "Event 3",
+                        "start_at": "2016-05-16 08:30:00",
+                        "top": 850,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 10:00:00",
+                        "height": 200,
+                        "name": "Event 1",
+                        "start_at": "2016-05-16 08:00:00",
+                        "top": 800,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:00:00",
+                        "height": 100,
+                        "name": "Event 2",
+                        "start_at": "2016-05-16 08:00:00",
+                        "top": 800,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 12:00:00",
+                        "height": 100,
+                        "name": "Event 6",
+                        "start_at": "2016-05-16 11:00:00",
+                        "top": 1100,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:30:00",
+                        "height": 50,
+                        "name": "Event 4",
+                        "start_at": "2016-05-16 09:00:00",
+                        "top": 900,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 11:30:00",
+                        "height": 50,
+                        "name": "Event 7",
+                        "start_at": "2016-05-16 11:00:00",
+                        "top": 1100,
+                      },
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-17 11:00:00",
+                          "height": 100,
+                          "name": "Event 8",
+                          "start_at": "2016-05-17 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-17 09:30:00",
+                          "height": 100,
+                          "name": "Event 9",
+                          "start_at": "2016-05-17 08:30:00",
+                          "top": 850,
+                        },
+                      ]
+                    }
+                  />,
+                  "className": "column-day",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "function",
+                  "props": Object {
+                    "events": Array [
+                      Object {
+                        "due_at": "2016-05-17 11:00:00",
+                        "height": 100,
+                        "name": "Event 8",
+                        "start_at": "2016-05-17 10:00:00",
+                        "top": 1000,
+                      },
+                      Object {
+                        "due_at": "2016-05-17 09:30:00",
+                        "height": 100,
+                        "name": "Event 9",
+                        "start_at": "2016-05-17 08:30:00",
+                        "top": 850,
+                      },
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-18 11:30:00",
+                          "height": 50,
+                          "name": "Event 10",
+                          "start_at": "2016-05-18 11:00:00",
+                          "top": 1100,
+                        },
+                      ]
+                    }
+                  />,
+                  "className": "column-day",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "function",
+                  "props": Object {
+                    "events": Array [
+                      Object {
+                        "due_at": "2016-05-18 11:30:00",
+                        "height": 50,
+                        "name": "Event 10",
+                        "start_at": "2016-05-18 11:00:00",
+                        "top": 1100,
+                      },
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Day
+                    events={Array []}
+                  />,
+                  "className": "column-day",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "function",
+                  "props": Object {
+                    "events": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Day
+                    events={Array []}
+                  />,
+                  "className": "column-day",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "function",
+                  "props": Object {
+                    "events": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Day
+                    events={Array []}
+                  />,
+                  "className": "column-day",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "function",
+                  "props": Object {
+                    "events": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Day
+                    events={Array []}
+                  />,
+                  "className": "column-day",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "function",
+                  "props": Object {
+                    "events": Array [],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "steps",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="columns-container week-header"
+          >
+            <div
+              className="column-day"
+            >
+              Mon
+            </div>
+            <div
+              className="column-day"
+            >
+              Tue
+            </div>
+            <div
+              className="column-day"
+            >
+              Wed
+            </div>
+            <div
+              className="column-day"
+            >
+              Thu
+            </div>
+            <div
+              className="column-day"
+            >
+              Fri
+            </div>
+            <div
+              className="column-day"
+            >
+              Sat
+            </div>
+            <div
+              className="column-day"
+            >
+              Sun
+            </div>
+          </div>,
+          <div
+            className="data"
+          >
+            <div
+              className="columns-container schedule-container"
+            >
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={
+                    Array [
+                      Object {
+                        "due_at": "2016-05-16 11:00:00",
+                        "height": 100,
+                        "name": "Event 5",
+                        "start_at": "2016-05-16 10:00:00",
+                        "top": 1000,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:30:00",
+                        "height": 100,
+                        "name": "Event 3",
+                        "start_at": "2016-05-16 08:30:00",
+                        "top": 850,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 10:00:00",
+                        "height": 200,
+                        "name": "Event 1",
+                        "start_at": "2016-05-16 08:00:00",
+                        "top": 800,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:00:00",
+                        "height": 100,
+                        "name": "Event 2",
+                        "start_at": "2016-05-16 08:00:00",
+                        "top": 800,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 12:00:00",
+                        "height": 100,
+                        "name": "Event 6",
+                        "start_at": "2016-05-16 11:00:00",
+                        "top": 1100,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 09:30:00",
+                        "height": 50,
+                        "name": "Event 4",
+                        "start_at": "2016-05-16 09:00:00",
+                        "top": 900,
+                      },
+                      Object {
+                        "due_at": "2016-05-16 11:30:00",
+                        "height": 50,
+                        "name": "Event 7",
+                        "start_at": "2016-05-16 11:00:00",
+                        "top": 1100,
+                      },
+                    ]
+                  }
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={
+                    Array [
+                      Object {
+                        "due_at": "2016-05-17 11:00:00",
+                        "height": 100,
+                        "name": "Event 8",
+                        "start_at": "2016-05-17 10:00:00",
+                        "top": 1000,
+                      },
+                      Object {
+                        "due_at": "2016-05-17 09:30:00",
+                        "height": 100,
+                        "name": "Event 9",
+                        "start_at": "2016-05-17 08:30:00",
+                        "top": 850,
+                      },
+                    ]
+                  }
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={
+                    Array [
+                      Object {
+                        "due_at": "2016-05-18 11:30:00",
+                        "height": 50,
+                        "name": "Event 10",
+                        "start_at": "2016-05-18 11:00:00",
+                        "top": 1100,
+                      },
+                    ]
+                  }
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+              <div
+                className="column-day"
+              >
+                <Day
+                  events={Array []}
+                />
+              </div>
+            </div>
+            <div
+              className="steps"
+            />
+          </div>,
+        ],
+        "className": "wrapper",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="column-day"
+              >
+                Mon
+              </div>,
+              <div
+                className="column-day"
+              >
+                Tue
+              </div>,
+              <div
+                className="column-day"
+              >
+                Wed
+              </div>,
+              <div
+                className="column-day"
+              >
+                Thu
+              </div>,
+              <div
+                className="column-day"
+              >
+                Fri
+              </div>,
+              <div
+                className="column-day"
+              >
+                Sat
+              </div>,
+              <div
+                className="column-day"
+              >
+                Sun
+              </div>,
+            ],
+            "className": "columns-container week-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Mon",
+                "className": "column-day",
+              },
+              "ref": null,
+              "rendered": "Mon",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Tue",
+                "className": "column-day",
+              },
+              "ref": null,
+              "rendered": "Tue",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Wed",
+                "className": "column-day",
+              },
+              "ref": null,
+              "rendered": "Wed",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Thu",
+                "className": "column-day",
+              },
+              "ref": null,
+              "rendered": "Thu",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Fri",
+                "className": "column-day",
+              },
+              "ref": null,
+              "rendered": "Fri",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sat",
+                "className": "column-day",
+              },
+              "ref": null,
+              "rendered": "Sat",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sun",
+                "className": "column-day",
+              },
+              "ref": null,
+              "rendered": "Sun",
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="columns-container schedule-container"
+              >
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-16 11:00:00",
+                          "height": 100,
+                          "name": "Event 5",
+                          "start_at": "2016-05-16 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 100,
+                          "name": "Event 3",
+                          "start_at": "2016-05-16 08:30:00",
+                          "top": 850,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 10:00:00",
+                          "height": 200,
+                          "name": "Event 1",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:00:00",
+                          "height": 100,
+                          "name": "Event 2",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 12:00:00",
+                          "height": 100,
+                          "name": "Event 6",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 50,
+                          "name": "Event 4",
+                          "start_at": "2016-05-16 09:00:00",
+                          "top": 900,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 11:30:00",
+                          "height": 50,
+                          "name": "Event 7",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                      ]
+                    }
+                  />
+                </div>
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-17 11:00:00",
+                          "height": 100,
+                          "name": "Event 8",
+                          "start_at": "2016-05-17 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-17 09:30:00",
+                          "height": 100,
+                          "name": "Event 9",
+                          "start_at": "2016-05-17 08:30:00",
+                          "top": 850,
+                        },
+                      ]
+                    }
+                  />
+                </div>
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={
+                      Array [
+                        Object {
+                          "due_at": "2016-05-18 11:30:00",
+                          "height": 50,
+                          "name": "Event 10",
+                          "start_at": "2016-05-18 11:00:00",
+                          "top": 1100,
+                        },
+                      ]
+                    }
+                  />
+                </div>
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>
+                <div
+                  className="column-day"
+                >
+                  <Day
+                    events={Array []}
+                  />
+                </div>
+              </div>,
+              <div
+                className="steps"
+              />,
+            ],
+            "className": "data",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="column-day"
+                  >
+                    <Day
+                      events={
+                        Array [
+                          Object {
+                            "due_at": "2016-05-16 11:00:00",
+                            "height": 100,
+                            "name": "Event 5",
+                            "start_at": "2016-05-16 10:00:00",
+                            "top": 1000,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 09:30:00",
+                            "height": 100,
+                            "name": "Event 3",
+                            "start_at": "2016-05-16 08:30:00",
+                            "top": 850,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 10:00:00",
+                            "height": 200,
+                            "name": "Event 1",
+                            "start_at": "2016-05-16 08:00:00",
+                            "top": 800,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 09:00:00",
+                            "height": 100,
+                            "name": "Event 2",
+                            "start_at": "2016-05-16 08:00:00",
+                            "top": 800,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 12:00:00",
+                            "height": 100,
+                            "name": "Event 6",
+                            "start_at": "2016-05-16 11:00:00",
+                            "top": 1100,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 09:30:00",
+                            "height": 50,
+                            "name": "Event 4",
+                            "start_at": "2016-05-16 09:00:00",
+                            "top": 900,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 11:30:00",
+                            "height": 50,
+                            "name": "Event 7",
+                            "start_at": "2016-05-16 11:00:00",
+                            "top": 1100,
+                          },
+                        ]
+                      }
+                    />
+                  </div>,
+                  <div
+                    className="column-day"
+                  >
+                    <Day
+                      events={
+                        Array [
+                          Object {
+                            "due_at": "2016-05-17 11:00:00",
+                            "height": 100,
+                            "name": "Event 8",
+                            "start_at": "2016-05-17 10:00:00",
+                            "top": 1000,
+                          },
+                          Object {
+                            "due_at": "2016-05-17 09:30:00",
+                            "height": 100,
+                            "name": "Event 9",
+                            "start_at": "2016-05-17 08:30:00",
+                            "top": 850,
+                          },
+                        ]
+                      }
+                    />
+                  </div>,
+                  <div
+                    className="column-day"
+                  >
+                    <Day
+                      events={
+                        Array [
+                          Object {
+                            "due_at": "2016-05-18 11:30:00",
+                            "height": 50,
+                            "name": "Event 10",
+                            "start_at": "2016-05-18 11:00:00",
+                            "top": 1100,
+                          },
+                        ]
+                      }
+                    />
+                  </div>,
+                  <div
+                    className="column-day"
+                  >
+                    <Day
+                      events={Array []}
+                    />
+                  </div>,
+                  <div
+                    className="column-day"
+                  >
+                    <Day
+                      events={Array []}
+                    />
+                  </div>,
+                  <div
+                    className="column-day"
+                  >
+                    <Day
+                      events={Array []}
+                    />
+                  </div>,
+                  <div
+                    className="column-day"
+                  >
+                    <Day
+                      events={Array []}
+                    />
+                  </div>,
+                ],
+                "className": "columns-container schedule-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Day
+                      events={
+                        Array [
+                          Object {
+                            "due_at": "2016-05-16 11:00:00",
+                            "height": 100,
+                            "name": "Event 5",
+                            "start_at": "2016-05-16 10:00:00",
+                            "top": 1000,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 09:30:00",
+                            "height": 100,
+                            "name": "Event 3",
+                            "start_at": "2016-05-16 08:30:00",
+                            "top": 850,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 10:00:00",
+                            "height": 200,
+                            "name": "Event 1",
+                            "start_at": "2016-05-16 08:00:00",
+                            "top": 800,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 09:00:00",
+                            "height": 100,
+                            "name": "Event 2",
+                            "start_at": "2016-05-16 08:00:00",
+                            "top": 800,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 12:00:00",
+                            "height": 100,
+                            "name": "Event 6",
+                            "start_at": "2016-05-16 11:00:00",
+                            "top": 1100,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 09:30:00",
+                            "height": 50,
+                            "name": "Event 4",
+                            "start_at": "2016-05-16 09:00:00",
+                            "top": 900,
+                          },
+                          Object {
+                            "due_at": "2016-05-16 11:30:00",
+                            "height": 50,
+                            "name": "Event 7",
+                            "start_at": "2016-05-16 11:00:00",
+                            "top": 1100,
+                          },
+                        ]
+                      }
+                    />,
+                    "className": "column-day",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "function",
+                    "props": Object {
+                      "events": Array [
+                        Object {
+                          "due_at": "2016-05-16 11:00:00",
+                          "height": 100,
+                          "name": "Event 5",
+                          "start_at": "2016-05-16 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 100,
+                          "name": "Event 3",
+                          "start_at": "2016-05-16 08:30:00",
+                          "top": 850,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 10:00:00",
+                          "height": 200,
+                          "name": "Event 1",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:00:00",
+                          "height": 100,
+                          "name": "Event 2",
+                          "start_at": "2016-05-16 08:00:00",
+                          "top": 800,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 12:00:00",
+                          "height": 100,
+                          "name": "Event 6",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 09:30:00",
+                          "height": 50,
+                          "name": "Event 4",
+                          "start_at": "2016-05-16 09:00:00",
+                          "top": 900,
+                        },
+                        Object {
+                          "due_at": "2016-05-16 11:30:00",
+                          "height": 50,
+                          "name": "Event 7",
+                          "start_at": "2016-05-16 11:00:00",
+                          "top": 1100,
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Day
+                      events={
+                        Array [
+                          Object {
+                            "due_at": "2016-05-17 11:00:00",
+                            "height": 100,
+                            "name": "Event 8",
+                            "start_at": "2016-05-17 10:00:00",
+                            "top": 1000,
+                          },
+                          Object {
+                            "due_at": "2016-05-17 09:30:00",
+                            "height": 100,
+                            "name": "Event 9",
+                            "start_at": "2016-05-17 08:30:00",
+                            "top": 850,
+                          },
+                        ]
+                      }
+                    />,
+                    "className": "column-day",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "function",
+                    "props": Object {
+                      "events": Array [
+                        Object {
+                          "due_at": "2016-05-17 11:00:00",
+                          "height": 100,
+                          "name": "Event 8",
+                          "start_at": "2016-05-17 10:00:00",
+                          "top": 1000,
+                        },
+                        Object {
+                          "due_at": "2016-05-17 09:30:00",
+                          "height": 100,
+                          "name": "Event 9",
+                          "start_at": "2016-05-17 08:30:00",
+                          "top": 850,
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Day
+                      events={
+                        Array [
+                          Object {
+                            "due_at": "2016-05-18 11:30:00",
+                            "height": 50,
+                            "name": "Event 10",
+                            "start_at": "2016-05-18 11:00:00",
+                            "top": 1100,
+                          },
+                        ]
+                      }
+                    />,
+                    "className": "column-day",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "function",
+                    "props": Object {
+                      "events": Array [
+                        Object {
+                          "due_at": "2016-05-18 11:30:00",
+                          "height": 50,
+                          "name": "Event 10",
+                          "start_at": "2016-05-18 11:00:00",
+                          "top": 1100,
+                        },
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Day
+                      events={Array []}
+                    />,
+                    "className": "column-day",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "function",
+                    "props": Object {
+                      "events": Array [],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Day
+                      events={Array []}
+                    />,
+                    "className": "column-day",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "function",
+                    "props": Object {
+                      "events": Array [],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Day
+                      events={Array []}
+                    />,
+                    "className": "column-day",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "function",
+                    "props": Object {
+                      "events": Array [],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Day
+                      events={Array []}
+                    />,
+                    "className": "column-day",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "function",
+                    "props": Object {
+                      "events": Array [],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "className": "steps",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

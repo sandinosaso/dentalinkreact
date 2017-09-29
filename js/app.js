@@ -1,12 +1,11 @@
-(function($){
-
-	var Schedule = {
-		variables: {
-			step: 30, //minutes
-			step_height: 50, // Px
-			start: '2016-05-16 00:00:00',
-		},
-		initialize: function() {
+(function ($) {
+  let Schedule = {
+    variables: {
+      step: 30, // minutes
+      step_height: 50, // Px
+      start: '2016-05-16 00:00:00',
+    },
+    initialize() {
 			// Render week headers
 			for (var i = 0;i<7;i++) {
 				var day = moment(this.variables.start).add(i,'days');
@@ -31,9 +30,8 @@
 			// }).error(function(err){
 			// 	console.log(err);
 			// })
-		}
-	}
+		},
+  };
 
-	Schedule.initialize();
-
-})(jQuery);
+  Schedule.initialize();
+}(jQuery));

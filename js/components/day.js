@@ -9,9 +9,9 @@ const Day = (props) => {
   const eventsGroups = getOverlapingEventsGroups(events);
 
   return (<div className="day">
-    {eventsGroups.map((group) => {
+    {eventsGroups.map((group, i) => {
       const eventGroupMatrix = getOverlapingGroupPositionMatrix(group);
-      return <EventGroup events={group} eventGroupMatrix={eventGroupMatrix} />;
+      return <EventGroup key={i} events={group} eventGroupMatrix={eventGroupMatrix} />;
     })}
   </div>);
 };

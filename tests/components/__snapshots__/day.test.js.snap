@@ -1,0 +1,553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Day /> renders an Day component 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Day
+    events={
+      Array [
+        Object {
+          "due_at": "2016-05-16 11:00:00",
+          "name": "Event 5",
+          "start_at": "2016-05-16 10:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:30:00",
+          "name": "Event 3",
+          "start_at": "2016-05-16 08:30:00",
+        },
+        Object {
+          "due_at": "2016-05-16 10:00:00",
+          "name": "Event 1",
+          "start_at": "2016-05-16 08:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:00:00",
+          "name": "Event 2",
+          "start_at": "2016-05-16 08:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 12:00:00",
+          "name": "Event 6",
+          "start_at": "2016-05-16 11:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 09:30:00",
+          "name": "Event 4",
+          "start_at": "2016-05-16 09:00:00",
+        },
+        Object {
+          "due_at": "2016-05-16 11:30:00",
+          "name": "Event 7",
+          "start_at": "2016-05-16 11:00:00",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <EventGroup
+          eventGroupMatrix={
+            Array [
+              Array [
+                Object {
+                  "due_at": "2016-05-16 11:00:00",
+                  "name": "Event 5",
+                  "start_at": "2016-05-16 10:00:00",
+                },
+              ],
+            ]
+          }
+          events={
+            Array [
+              Object {
+                "due_at": "2016-05-16 11:00:00",
+                "name": "Event 5",
+                "start_at": "2016-05-16 10:00:00",
+              },
+            ]
+          }
+        />,
+        <EventGroup
+          eventGroupMatrix={
+            Array [
+              Array [
+                Object {
+                  "due_at": "2016-05-16 10:00:00",
+                  "name": "Event 1",
+                  "start_at": "2016-05-16 08:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 09:00:00",
+                  "name": "Event 2",
+                  "start_at": "2016-05-16 08:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 09:30:00",
+                  "name": "Event 3",
+                  "start_at": "2016-05-16 08:30:00",
+                },
+              ],
+              Array [
+                undefined,
+                Object {
+                  "due_at": "2016-05-16 09:30:00",
+                  "name": "Event 4",
+                  "start_at": "2016-05-16 09:00:00",
+                },
+              ],
+            ]
+          }
+          events={
+            Array [
+              Object {
+                "due_at": "2016-05-16 10:00:00",
+                "name": "Event 1",
+                "start_at": "2016-05-16 08:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:00:00",
+                "name": "Event 2",
+                "start_at": "2016-05-16 08:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "name": "Event 4",
+                "start_at": "2016-05-16 09:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "name": "Event 3",
+                "start_at": "2016-05-16 08:30:00",
+              },
+            ]
+          }
+        />,
+        <EventGroup
+          eventGroupMatrix={
+            Array [
+              Array [
+                Object {
+                  "due_at": "2016-05-16 11:30:00",
+                  "name": "Event 7",
+                  "start_at": "2016-05-16 11:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 12:00:00",
+                  "name": "Event 6",
+                  "start_at": "2016-05-16 11:00:00",
+                },
+              ],
+            ]
+          }
+          events={
+            Array [
+              Object {
+                "due_at": "2016-05-16 11:30:00",
+                "name": "Event 7",
+                "start_at": "2016-05-16 11:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 12:00:00",
+                "name": "Event 6",
+                "start_at": "2016-05-16 11:00:00",
+              },
+            ]
+          }
+        />,
+      ],
+      "className": "day",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "eventGroupMatrix": Array [
+            Array [
+              Object {
+                "due_at": "2016-05-16 11:00:00",
+                "name": "Event 5",
+                "start_at": "2016-05-16 10:00:00",
+              },
+            ],
+          ],
+          "events": Array [
+            Object {
+              "due_at": "2016-05-16 11:00:00",
+              "name": "Event 5",
+              "start_at": "2016-05-16 10:00:00",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "eventGroupMatrix": Array [
+            Array [
+              Object {
+                "due_at": "2016-05-16 10:00:00",
+                "name": "Event 1",
+                "start_at": "2016-05-16 08:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:00:00",
+                "name": "Event 2",
+                "start_at": "2016-05-16 08:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "name": "Event 3",
+                "start_at": "2016-05-16 08:30:00",
+              },
+            ],
+            Array [
+              undefined,
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "name": "Event 4",
+                "start_at": "2016-05-16 09:00:00",
+              },
+            ],
+          ],
+          "events": Array [
+            Object {
+              "due_at": "2016-05-16 10:00:00",
+              "name": "Event 1",
+              "start_at": "2016-05-16 08:00:00",
+            },
+            Object {
+              "due_at": "2016-05-16 09:00:00",
+              "name": "Event 2",
+              "start_at": "2016-05-16 08:00:00",
+            },
+            Object {
+              "due_at": "2016-05-16 09:30:00",
+              "name": "Event 4",
+              "start_at": "2016-05-16 09:00:00",
+            },
+            Object {
+              "due_at": "2016-05-16 09:30:00",
+              "name": "Event 3",
+              "start_at": "2016-05-16 08:30:00",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "eventGroupMatrix": Array [
+            Array [
+              Object {
+                "due_at": "2016-05-16 11:30:00",
+                "name": "Event 7",
+                "start_at": "2016-05-16 11:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 12:00:00",
+                "name": "Event 6",
+                "start_at": "2016-05-16 11:00:00",
+              },
+            ],
+          ],
+          "events": Array [
+            Object {
+              "due_at": "2016-05-16 11:30:00",
+              "name": "Event 7",
+              "start_at": "2016-05-16 11:00:00",
+            },
+            Object {
+              "due_at": "2016-05-16 12:00:00",
+              "name": "Event 6",
+              "start_at": "2016-05-16 11:00:00",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <EventGroup
+            eventGroupMatrix={
+              Array [
+                Array [
+                  Object {
+                    "due_at": "2016-05-16 11:00:00",
+                    "name": "Event 5",
+                    "start_at": "2016-05-16 10:00:00",
+                  },
+                ],
+              ]
+            }
+            events={
+              Array [
+                Object {
+                  "due_at": "2016-05-16 11:00:00",
+                  "name": "Event 5",
+                  "start_at": "2016-05-16 10:00:00",
+                },
+              ]
+            }
+          />,
+          <EventGroup
+            eventGroupMatrix={
+              Array [
+                Array [
+                  Object {
+                    "due_at": "2016-05-16 10:00:00",
+                    "name": "Event 1",
+                    "start_at": "2016-05-16 08:00:00",
+                  },
+                  Object {
+                    "due_at": "2016-05-16 09:00:00",
+                    "name": "Event 2",
+                    "start_at": "2016-05-16 08:00:00",
+                  },
+                  Object {
+                    "due_at": "2016-05-16 09:30:00",
+                    "name": "Event 3",
+                    "start_at": "2016-05-16 08:30:00",
+                  },
+                ],
+                Array [
+                  undefined,
+                  Object {
+                    "due_at": "2016-05-16 09:30:00",
+                    "name": "Event 4",
+                    "start_at": "2016-05-16 09:00:00",
+                  },
+                ],
+              ]
+            }
+            events={
+              Array [
+                Object {
+                  "due_at": "2016-05-16 10:00:00",
+                  "name": "Event 1",
+                  "start_at": "2016-05-16 08:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 09:00:00",
+                  "name": "Event 2",
+                  "start_at": "2016-05-16 08:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 09:30:00",
+                  "name": "Event 4",
+                  "start_at": "2016-05-16 09:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 09:30:00",
+                  "name": "Event 3",
+                  "start_at": "2016-05-16 08:30:00",
+                },
+              ]
+            }
+          />,
+          <EventGroup
+            eventGroupMatrix={
+              Array [
+                Array [
+                  Object {
+                    "due_at": "2016-05-16 11:30:00",
+                    "name": "Event 7",
+                    "start_at": "2016-05-16 11:00:00",
+                  },
+                  Object {
+                    "due_at": "2016-05-16 12:00:00",
+                    "name": "Event 6",
+                    "start_at": "2016-05-16 11:00:00",
+                  },
+                ],
+              ]
+            }
+            events={
+              Array [
+                Object {
+                  "due_at": "2016-05-16 11:30:00",
+                  "name": "Event 7",
+                  "start_at": "2016-05-16 11:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 12:00:00",
+                  "name": "Event 6",
+                  "start_at": "2016-05-16 11:00:00",
+                },
+              ]
+            }
+          />,
+        ],
+        "className": "day",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "eventGroupMatrix": Array [
+              Array [
+                Object {
+                  "due_at": "2016-05-16 11:00:00",
+                  "name": "Event 5",
+                  "start_at": "2016-05-16 10:00:00",
+                },
+              ],
+            ],
+            "events": Array [
+              Object {
+                "due_at": "2016-05-16 11:00:00",
+                "name": "Event 5",
+                "start_at": "2016-05-16 10:00:00",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "eventGroupMatrix": Array [
+              Array [
+                Object {
+                  "due_at": "2016-05-16 10:00:00",
+                  "name": "Event 1",
+                  "start_at": "2016-05-16 08:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 09:00:00",
+                  "name": "Event 2",
+                  "start_at": "2016-05-16 08:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 09:30:00",
+                  "name": "Event 3",
+                  "start_at": "2016-05-16 08:30:00",
+                },
+              ],
+              Array [
+                undefined,
+                Object {
+                  "due_at": "2016-05-16 09:30:00",
+                  "name": "Event 4",
+                  "start_at": "2016-05-16 09:00:00",
+                },
+              ],
+            ],
+            "events": Array [
+              Object {
+                "due_at": "2016-05-16 10:00:00",
+                "name": "Event 1",
+                "start_at": "2016-05-16 08:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:00:00",
+                "name": "Event 2",
+                "start_at": "2016-05-16 08:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "name": "Event 4",
+                "start_at": "2016-05-16 09:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 09:30:00",
+                "name": "Event 3",
+                "start_at": "2016-05-16 08:30:00",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "eventGroupMatrix": Array [
+              Array [
+                Object {
+                  "due_at": "2016-05-16 11:30:00",
+                  "name": "Event 7",
+                  "start_at": "2016-05-16 11:00:00",
+                },
+                Object {
+                  "due_at": "2016-05-16 12:00:00",
+                  "name": "Event 6",
+                  "start_at": "2016-05-16 11:00:00",
+                },
+              ],
+            ],
+            "events": Array [
+              Object {
+                "due_at": "2016-05-16 11:30:00",
+                "name": "Event 7",
+                "start_at": "2016-05-16 11:00:00",
+              },
+              Object {
+                "due_at": "2016-05-16 12:00:00",
+                "name": "Event 6",
+                "start_at": "2016-05-16 11:00:00",
+              },
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

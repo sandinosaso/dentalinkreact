@@ -81,7 +81,7 @@ body {
 
 .event {
   position: absolute;
-  background-color: blue;
-  color: white;
+  background-color: #6C99EE;
+  color: #efefef;
   border: 2px solid;
 }
