@@ -4,3 +4,6 @@ npm-debug.log
 
 # dist folder
 dist/
+
+# test generated files
+coverage/
